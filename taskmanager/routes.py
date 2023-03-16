@@ -59,6 +59,7 @@ def add_task():
         return redirect(url_for("home"))
     return render_template("add_task.html", categories=categories)
 
+
 @app.route("/edit_task/<int:task_id>", methods=["GET", "POST"])
 def edit_task(task_id):
     task = Task.query.get_or_404(task_id)
